@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/java/Tests/CreateDeviceTest.java=UTF-8
+encoding//src/test/java/Tests/CreateOwnerTest.java=UTF-8
+encoding//src/test/java/Tests/CreateSystemUserTest.java=UTF-8
+encoding//src/test/java/Tests/DashboardTest.java=UTF-8
+encoding//src/test/java/Tests/Flow.java=UTF-8
+encoding//src/test/java/Tests/LoginTest.java=UTF-8
+encoding//src/test/java/Tests/LogoutTest.java=UTF-8
+encoding//src/test/resources=UTF-8
+encoding/<project>=UTF-8
