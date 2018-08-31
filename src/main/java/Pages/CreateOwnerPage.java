@@ -14,7 +14,7 @@ public class CreateOwnerPage extends BasePage{
 	WebElement OrganisationName = null;
 
 	private By Owner = By.cssSelector("span.icon-link");
-	private By Add = By.xpath("/html/body/div[1]/div[2]/div/div/h2/div/a/span");
+	private By AddOwner = By.xpath("/html/body/div[1]/div[2]/div/div/h2/div/a/span");
 	private By Modal = By.className("modal-dialog");
 	private By OwnerName = By.name("organisationName");
 	private By timezone = By.name("timezone");
@@ -34,7 +34,7 @@ public class CreateOwnerPage extends BasePage{
 	public String createOwner(String ownername) {
 		// Create owner
 		WebDriverUtils.explicitWait(driver, 4000);
-		WebDriverUtils.clickOnElementWithWait(driver, Add);
+		WebDriverUtils.clickOnElementWithWait(driver, AddOwner);
 		WebDriverUtils.explicitWait(driver, 4000);
 		WebDriverUtils.isElementDisplayed(driver, Modal);
 		WebDriverUtils.explicitWait(driver, 4000);

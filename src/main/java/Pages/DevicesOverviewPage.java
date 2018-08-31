@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import WebUtilis.WebDriverUtils;
 
-public class DevicesOverviewPage extends BasePage{
+public class DevicesOverviewPage extends BasePage {
 
 	By devicesMenu = By.id("devices");
 	By devicesOverview = By.xpath("//a[text()='Overview']");
@@ -24,11 +24,10 @@ public class DevicesOverviewPage extends BasePage{
 		super(driver);
 	}
 
-	public void searchDevice(String device)
-	{   
+	public void searchDevice(String device) {
 		WebDriverUtils.clickOnElementWithWait(driver, devicesMenu);
 		WebDriverUtils.clickOnElementWithWait(driver, devicesOverview);
-		WebDriverUtils.enterTextBox(driver,searchDevice, device);
+		WebDriverUtils.enterTextBox(driver, searchDevice, device);
 		WebDriverUtils.clickOnElementWithWait(driver, SearchButton);
 		WebElement tableDevice = driver.findElement(By.id("DataTables_Table_0_wrapper"));
 
@@ -38,12 +37,9 @@ public class DevicesOverviewPage extends BasePage{
 		for (WebElement row : allRows) {
 			java.util.List<WebElement> cells = row.findElements(By.tagName("td"));
 			for (WebElement cell : cells)
-				if(cell.getText() == device)
-				{
+				if (cell.getText() == device) {
 					System.out.println("Device is founs");
-				}
-				else
-				{
+				} else {
 					System.out.println("Something is not right");
 				}
 		}
@@ -52,10 +48,10 @@ public class DevicesOverviewPage extends BasePage{
 
 	public void checkOpenFaults() {
 
-		//Click on show only open events
+		// Click on show only open events
 		WebDriverUtils.clickOnElementWithWait(driver, filter);
 		WebDriverUtils.clickOnElementWithWait(driver, openEvents);
-		//Find organisation already created in the table of organisations
+		// Find organisation already created in the table of organisations
 		WebElement table = driver.findElement(By.name("events:formEvent:search"));
 
 		// Now get all the TR elements from the table
@@ -64,12 +60,9 @@ public class DevicesOverviewPage extends BasePage{
 		for (WebElement row : allRows) {
 			java.util.List<WebElement> cells = row.findElements(By.tagName("td"));
 			for (WebElement cell : cells)
-				if(cell.getText() =="Not closed")
-				{
+				if (cell.getText() == "Not closed") {
 					System.out.println("Only open events are being displayed");
-				}
-				else
-				{
+				} else {
 					System.out.println("Something is not right");
 				}
 		}
@@ -81,6 +74,6 @@ public class DevicesOverviewPage extends BasePage{
 		WebDriverUtils.explicitWait(driver, 4000);
 		WebDriverUtils.isElementDisplayed(driver, DevicesLocation);
 		return new DevicesLocationPage(driver);
-	}	
+	}
 
 }

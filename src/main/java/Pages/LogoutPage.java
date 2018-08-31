@@ -20,5 +20,4 @@ public class LogoutPage extends BasePage{
 		WebDriverUtils.explicitWait(driver, 4000);
 		WebDriverUtils.clickOnElementWithWait(driver, logout);
 	}
-
 }

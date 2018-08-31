@@ -15,14 +15,13 @@ public class LoginTest {
 	WebDriver driver;
 	LoginPage objLogin;
 	DashboardPage objDashboard;
-	
-	private static final String URL ="https://qa.hubeleon.net/";
+
+	private static final String URL = "https://qa.hubeleon.net/";
 
 	@BeforeTest
 
 	public void setup() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Aila\\"
-				+ "eclipse-workspace\\my"
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Aila\\" + "eclipse-workspace\\my"
 				+ "\\src\\test\\resources\\geckodriver-v0.21.0-win64\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -31,7 +30,7 @@ public class LoginTest {
 
 	/**
 	 * 
-	 * This test case will login in http://dewa.hubeleon.ae/
+	 * This test case will login in https://qa.hubeleon.net/
 	 * 
 	 * Login to application
 	 * 

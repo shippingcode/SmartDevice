@@ -15,7 +15,8 @@ public class CreateDevicePage extends BasePage{
 
 	private By Device = By.id("devices");
 	private By Organisation = By.name("organisation");
-	private By Add = By.xpath("/html/body/div[1]/div[2]/div/div/h2/div/a/span");
+	private By ListMenu = By.xpath("/html/body/div[1]/div[1]/div/div/nav/div[2]/ul/li[3]/ul/li[1]/a");
+	private By AddDevice = By.xpath("/html/body/div[1]/div[2]/div/div/h2/div");
 	private By Modal = By.xpath("/html/body/div[1]/div[4]/div/form/div[2]/div/div[2]");
 	private By DeviceName = By.name("deviceName");
 	private By maker = By.id("organisationId");
@@ -42,8 +43,9 @@ public class CreateDevicePage extends BasePage{
 
 	{
 		// Go to Device->List
+		
 		WebDriverUtils.explicitWait(driver, 4000);
-		WebDriverUtils.clickOnElementWithWait(driver, Add);
+		WebDriverUtils.clickOnElementWithWait(driver, AddDevice);
 		WebDriverUtils.explicitWait(driver, 4000);
 		WebDriverUtils.isElementDisplayed(driver, Modal);
 		WebDriverUtils.explicitWait(driver, 4000);

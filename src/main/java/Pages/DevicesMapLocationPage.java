@@ -9,10 +9,6 @@ public class DevicesMapLocationPage extends BasePage {
 	By devicesMenu = By.id("devices");
 	By devicesReport = By.xpath("//a[text()='Report']");
 
-
-
-
-
 	public DevicesMapLocationPage(WebDriver driver) {
 		super(driver);
 	}
@@ -28,6 +24,6 @@ public class DevicesMapLocationPage extends BasePage {
 		WebDriverUtils.explicitWait(driver, 4000);
 		WebDriverUtils.isElementDisplayed(driver, devicesReport);
 		return new DevicesReportPage(driver);
-	}	
+	}
 
 }

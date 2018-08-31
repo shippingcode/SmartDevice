@@ -17,7 +17,7 @@ public class CreateSystemUserPage extends BasePage{
 	WebDriver driver = null;
 
 	
-	private By AddUser = By.xpath("/html/body/div[1]/div[3]/div/div/div/h2/div/a");
+	private By AddUser = By.xpath("/html/body/div[1]/div[3]/div/div/div/h2/div/a/span");
 	private By FirstName = By.name("firstName");
 	private By Name = By.name("surname");
 	private By Username = By.name("userName");

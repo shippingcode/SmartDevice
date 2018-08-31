@@ -29,7 +29,7 @@ public class LogoutTest {
 
 	/**
 	 * 
-	 * This test case will login in http://dewa.hubeleon.ae/
+	 * This test case will login in https://qa.hubeleon.net/
 	 * Login to application
 	 * Verify the home page using Dashboard message
 	 * 
